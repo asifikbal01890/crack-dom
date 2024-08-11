@@ -7,32 +7,67 @@
     <title>Creck Down Dom</title>
     <link rel="stylesheet" href="style/style.css">
     <style>
-        h1{
+        h1 {
             background: #00ffd9;
         }
     </style>
 </head>
 
 <body>
-    <h1>Creck Down Dom</h1>
+    <h1 class="text-cente">Creck Down Dom</h1>
     <ul>
-        <li>Creck HTML</li>
+        <li id="text-blue">Creck HTML</li>
+        <li> Creck CSS</li>
+        <li class="text-cente bg-black hold hi"> Creck JS</li>
         <li> Creck CSS</li>
         <li> Creck JS</li>
-        <li> Creck CSS</li>
-        <li> Creck JS</li>
+
     </ul>
 
-
+    <ol class="text-center">
+        <li> Creck JS</li>
+        <li> Creck JS</li>
+        <li> Creck JS</li>
+    </ol>
 
     <script src="js/index.js"></script>
-    <script src="js/hello.js"></script>
-
-
 
 
     <script>
-        console.log("internal js");
+        // Option - 1
+        const liCollection = document.getElementsByTagName('li')
+        for (const a of liCollection) {
+            a.style.backgroundColor = 'tomato'
+            a.style.padding = '20px'
+            a.style.margin = '20px'
+            a.style.color = 'white'
+        }
+
+        // Option - 2
+        const li = document.getElementById('text-blue').innerText = 'hello guys'
+// console.log(li);
+
+        // Option - 3
+        // const liCollections = document.getElementsByClassName('text-center')[2].innerHTML
+        // console.log(liCollections);
+
+        // Option - 4
+        const liCollection1 = document.querySelectorAll('.text-center li')
+        // console.log(liCollection1);
+
+        // Option - 5
+        const liCollection2 = document.querySelector('.text-center')
+        // console.log(liCollection2);
+         
+        // const classes = document.getElementsByTagName('li')[2].classList.replace('text-cente', 'heloo')
+    //    document.getElementsByTagName('li')[2].classList.remove('hold')
+       const classes2 = document.getElementsByTagName('li')[2].classList
+       console.log(classes2);
+    //    document.getElementsByTagName('li')[2].classList.remove('hi')
+       document.getElementsByTagName('li')[2].classList.add('sajib')
+       console.log(classes2);
+        
+        
     </script>
 
 
